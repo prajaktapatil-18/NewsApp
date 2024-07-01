@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/bg_color"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    style="@style/screenBackground"
+    tools:context=".UI.MainActivity">
 
 
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
         android:id="@+id/tooldBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -20,18 +20,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="News App"
-                android:textColor="@color/white"
-                android:textSize="25sp"
+                android:text="@string/news"
+                android:textColor="@color/purple_700"
+                android:textSize="30sp"
                 android:textStyle="bold" />
+
+
+
+            <Switch
+                android:id="@+id/switchOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:layout_below="@id/tooldBar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="8dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="4dp"
+            android:layout_marginBottom="5dp"
+            app:queryHint="news" />
+
+    </androidx.cardview.widget.CardView>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -40,18 +72,31 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tooldBar"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/category_lyt" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rvCategory"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_margin="5dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/news_lyt" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
 
 </RelativeLayout>

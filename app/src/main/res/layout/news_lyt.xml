@@ -2,9 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardBackgroundColor="@color/bg_color">
+    android:layout_height="150dp"
+    android:layout_margin="6dp"
+    android:elevation="7dp"
+    android:padding="8dp"
+    app:cardCornerRadius="14dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,42 +14,44 @@
 
         <ImageView
             android:id="@+id/imgNews"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/news"
+            android:layout_width="140dp"
+            android:layout_height="160dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-3dp"
+            android:layout_margin="8dp"
             android:layout_marginEnd="0dp"
-            android:scaleType="fitXY" />
+            android:elevation="9dp"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/news" />
 
         <TextView
             android:id="@+id/newsHeadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imgNews"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@id/imgNews"
             android:maxLines="2"
             android:text="Headline"
-            android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textColor="@color/purple_700"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/newsSubHeadline"
+            style="@style/TextColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/newsHeadline"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/imgNews"
             android:text="Sub info"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
 
     </RelativeLayout>

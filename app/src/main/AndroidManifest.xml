@@ -14,13 +14,13 @@
         android:theme="@style/Theme.NewsApp"
         tools:targetApi="34">
         <activity
-            android:name=".DetailActivity"
+            android:name=".UI.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashNewsScreen"
+            android:name=".UI.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.SplashNewsScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

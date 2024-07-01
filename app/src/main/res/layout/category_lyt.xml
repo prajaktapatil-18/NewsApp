@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="140dp"
     android:layout_height="80dp"
-    android:layout_margin="20dp"
+    android:layout_margin="6dp"
     android:elevation="8dp"
     app:cardCornerRadius="10dp">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@color/white" />
+        android:src="@drawable/news" />
 
     <TextView
         android:id="@+id/cateTitle"
@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:text="Category"
-        android:textSize="25sp" />
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
 </androidx.cardview.widget.CardView>

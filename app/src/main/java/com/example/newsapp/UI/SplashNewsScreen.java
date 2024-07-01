@@ -1,10 +1,12 @@
-package com.example.newsapp;
+package com.example.newsapp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.newsapp.R;
 
 public class SplashNewsScreen extends AppCompatActivity {
 
@@ -17,9 +19,10 @@ public class SplashNewsScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(SplashNewsScreen.this,MainActivity.class));
+                startActivity(new Intent(SplashNewsScreen.this, MainActivity.class));
+                finish();
 
             }
-        },2000);
+        }, 2000);
     }
 }

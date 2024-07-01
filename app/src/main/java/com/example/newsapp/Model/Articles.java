@@ -1,12 +1,12 @@
-package com.example.newsapp;
+package com.example.newsapp.Model;
 
 public class Articles {
 
-     private String  title;
-     private String desp;
-     private String url;
-     private String urlToImage;
-     private String content;
+    private String title;
+    private String description;
+    private String url;
+    private String urlToImage;
+    private String content;
 
     public String getTitle() {
         return title;
@@ -16,12 +16,12 @@ public class Articles {
         this.title = title;
     }
 
-    public String getDesp() {
-        return desp;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesp(String desp) {
-        this.desp = desp;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getUrl() {
@@ -50,7 +50,7 @@ public class Articles {
 
     public Articles(String title, String desp, String url, String urlToImage, String content) {
         this.title = title;
-        this.desp = desp;
+        this.description = desp;
         this.url = url;
         this.urlToImage = urlToImage;
         this.content = content;

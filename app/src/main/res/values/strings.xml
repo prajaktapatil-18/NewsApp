@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="news">News App</string>
+    <string name="title">title</string>
+    <string name="sub_desp">Sub desp</string>
+    <string name="content">content</string>
+    <string name="more_info">More Info</string>
+    <string name="info_news">Keep up with current events</string>
 </resources>

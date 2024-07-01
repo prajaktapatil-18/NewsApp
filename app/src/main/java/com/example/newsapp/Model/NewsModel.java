@@ -1,11 +1,13 @@
-package com.example.newsapp;
+package com.example.newsapp.Model;
+
+import com.example.newsapp.Model.Articles;
 
 import java.util.ArrayList;
 
 public class NewsModel {
     private String status;
     private int result;
-    private ArrayList<Articles>articles;
+    private ArrayList<Articles> articles;
 
     public String getStatus() {
         return status;
